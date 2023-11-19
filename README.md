@@ -1,9 +1,11 @@
 # Tumor Growth Localization and Classification using U-Net
 Project overview
-This project aims to use the Attention U-Net and U-Net architecture for localizing tumor growth in medical images, specifically in cases where tumor boundaries are not easily discernible to the human eye. The U-Net model will be trained to generate masks highlighting the tumor area. Subsequently, the generated masks will be classified to determine whether the tumor is malignant, benign, or normal.
+This project delves into the improvement of breast cancer image segmentation through a multi-step approach that includes data preprocessing, classification, and ensemble-based segmentation.The initial dataset underwent preprocessing to ensure it was well-prepared for subsequent stages.Using the VGG model, the preprocessed dataset was classified into tumorous and non-tumorous images, resulting in a new dataset which was then subjected to segmentation. 
 
-Introduction
-Tumor localization and classification are crucial tasks in medical image analysis. This project utilizes the Attention U- Net and U-Net architecture,  popular deep learning models for semantic segmentation tasks, to pinpoint the tumor regions in medical images. Once the localization is achieved, the generated mask images will be classified to determine the tumor's nature: malignant, benign, or normal.
+Five distinct segmentation models—UNet, Attention UNet, Residual UNet, SegNet, and DeepLab—were individually assessed, with DeepLab demonstrating the highest individual performance at an IoU Dice Balance of 0.865 and SegNet recording the lowest at 0.436.
+
+The basis of the study is centred on the use of ensemble learning to merge multiple segmentation models. Through the employment of threshold voting, significant improvements in segmentation results were observed. DeepLab and Attention UNet combined to form the most effective ensemble combination, with Mean IOU of 0.876 and Mean dice coefficient of 0.932 and thus an IOU Dice Balance of 0.904 at a threshold of 0.9.
+
 
 About Dataset
 The data reviews the medical images of breast cancer using ultrasound scan.Breast Ultrasound Dataset is categorized into three classes: normal, benign, and malignant images. Breast ultrasound images can produce great results in classification, detection, and segmentation of breast cancer when combined with machine learning.
