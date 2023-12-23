@@ -1,4 +1,5 @@
-# Tumor Growth Localization and Classification using U-Net
+# Advancing Breast Cancer Segmentation: An Ensemble Learning Approach
+
 Project overview
 This project delves into the improvement of breast cancer image segmentation through a multi-step approach that includes data preprocessing, classification, and ensemble-based segmentation.The initial dataset underwent preprocessing to ensure it was well-prepared for subsequent stages.Using the VGG model, the preprocessed dataset was classified into tumorous and non-tumorous images, resulting in a new dataset which was then subjected to segmentation. 
 
